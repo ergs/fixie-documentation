@@ -11,14 +11,14 @@ The fixie command line interface is as follows:
                  [--job-aliases-file FIXIE_JOB_ALIASES_FILE]
                  [--holding-time FIXIE_HOLDING_TIME] [--njobs FIXIE_NJOBS]
                  [--logfile FIXIE_LOGFILE] [--sims-dir FIXIE_SIMS_DIR]
-                 [--paths-dir FIXIE_PATHS_DIR] [--creds-url FIXIE_CREDS_URL]
-                 [--data-url FIXIE_DATA_URL] [--batch-url FIXIE_BATCH_URL]
-                 [--creds-dir FIXIE_CREDS_DIR]
-                 [--queued-jobs-dir FIXIE_QUEUED_JOBS_DIR]
-                 [--canceled-jobs-dir FIXIE_CANCELED_JOBS_DIR]
+                 [--paths-dir FIXIE_PATHS_DIR] [--data-url FIXIE_DATA_URL]
+                 [--batch-url FIXIE_BATCH_URL] [--creds-url FIXIE_CREDS_URL]
                  [--running-jobs-dir FIXIE_RUNNING_JOBS_DIR]
-                 [--failed-jobs-dir FIXIE_FAILED_JOBS_DIR]
                  [--completed-jobs-dir FIXIE_COMPLETED_JOBS_DIR]
+                 [--queued-jobs-dir FIXIE_QUEUED_JOBS_DIR]
+                 [--failed-jobs-dir FIXIE_FAILED_JOBS_DIR]
+                 [--canceled-jobs-dir FIXIE_CANCELED_JOBS_DIR]
+                 [--creds-dir FIXIE_CREDS_DIR]
                  services [services ...]
 
     Cyclus-as-a-Service
@@ -54,29 +54,29 @@ The fixie command line interface is as follows:
       --paths-dir FIXIE_PATHS_DIR
                             Path to fixie paths directory, where database path
                             metadata is stored.
-      --creds-url FIXIE_CREDS_URL
-                            Base URL for creds service, default is an empty string
-                            indicating service is provided locally (if available).
       --data-url FIXIE_DATA_URL
                             Base URL for data service, default is an empty string
                             indicating service is provided locally (if available).
       --batch-url FIXIE_BATCH_URL
                             Base URL for batch service, default is an empty string
                             indicating service is provided locally (if available).
-      --creds-dir FIXIE_CREDS_DIR
-                            Path to fixie credentials directory
-      --queued-jobs-dir FIXIE_QUEUED_JOBS_DIR
-                            Path to fixie queued jobs directory, must be distinct
-                            from other status directories
-      --canceled-jobs-dir FIXIE_CANCELED_JOBS_DIR
-                            Path to fixie canceled jobs directory, must be
-                            distinct from other status directories
+      --creds-url FIXIE_CREDS_URL
+                            Base URL for creds service, default is an empty string
+                            indicating service is provided locally (if available).
       --running-jobs-dir FIXIE_RUNNING_JOBS_DIR
                             Path to fixie running jobs directory, must be distinct
-                            from other status directories
-      --failed-jobs-dir FIXIE_FAILED_JOBS_DIR
-                            Path to fixie failed jobs directory, must be distinct
                             from other status directories
       --completed-jobs-dir FIXIE_COMPLETED_JOBS_DIR
                             Path to fixie completed jobs directory, must be
                             distinct from other status directories
+      --queued-jobs-dir FIXIE_QUEUED_JOBS_DIR
+                            Path to fixie queued jobs directory, must be distinct
+                            from other status directories
+      --failed-jobs-dir FIXIE_FAILED_JOBS_DIR
+                            Path to fixie failed jobs directory, must be distinct
+                            from other status directories
+      --canceled-jobs-dir FIXIE_CANCELED_JOBS_DIR
+                            Path to fixie canceled jobs directory, must be
+                            distinct from other status directories
+      --creds-dir FIXIE_CREDS_DIR
+                            Path to fixie credentials directory

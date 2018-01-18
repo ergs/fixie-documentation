@@ -2,7 +2,7 @@ Fixie API
 =========
 The interfaces for the fixie ecosystem:
 
-**fixe**
+**fixie**
 
 .. toctree::
     :titlesonly:
@@ -14,3 +14,13 @@ The interfaces for the fixie ecosystem:
     fixie-main
     fixie-tools
     fixie-jsonutils
+
+**fixie-creds**
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 1
+
+    fixie_creds-cache
+    fixie_creds-environ
+    fixie_creds-handlers

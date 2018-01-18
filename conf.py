@@ -12,7 +12,9 @@ import sys
 import glob
 import builtins
 import inspect
+import textwrap
 import importlib
+import subprocess
 try:
     import pprintpp as pprint
 except ImportError:
@@ -241,3 +243,22 @@ autosummary_generate = []
 
 # Prevent numpy from making silly tables
 numpydoc_show_class_members = False
+
+
+#
+# autogenerate some docs
+#
+
+USAGE = """Fixie Usage
+===========
+The fixie command line interface is as follows:
+
+.. code-block:: bash
+
+    $ fixie --help
+""" + textwrap.indent(subprocess.check_output(
+        ['fixie', '--help'], universal_newlines=True), '    ')
+
+with open('usage.rst', 'w') as f:
+    f.write(USAGE)
+

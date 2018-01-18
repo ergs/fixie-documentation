@@ -3,10 +3,10 @@
 =================
 Developer's Guide
 =================
-Welcome to the rever developer's guide!  This is a place for developers to
+Welcome to the fixie developer's guide!  This is a place for developers to
 place information that does not belong in the user's guide or the library
 reference but is useful or necessary for the next people that come along to
-develop rever.
+develop fixie.
 
 .. note:: All code changes must go through the pull request review procedure.
 
@@ -35,14 +35,14 @@ filtered out too!
 
 Style Guide
 ===========
-rever is a pure Python project, and so we use PEP8 (with some additions) to
+fixie is a pure Python project, and so we use PEP8 (with some additions) to
 ensure consistency throughout the code base.
 
 ----------------------------------
 Rules to Write By
 ----------------------------------
 It is important to refer to things and concepts by their most specific name.
-When writing rever code or documentation please use technical terms
+When writing fixie code or documentation please use technical terms
 appropriately. The following rules help provide needed clarity.
 
 **********
@@ -64,10 +64,10 @@ Expectations
 -------------------
 Python Style Guide
 -------------------
-rever uses `PEP8`_ for all Python code. The following rules apply where `PEP8`_
+fixie uses `PEP8`_ for all Python code. The following rules apply where `PEP8`_
 is open to interpretation.
 
-* Use absolute imports (``import rever.tools``) rather than explicit
+* Use absolute imports (``import fixie.tools``) rather than explicit
   relative imports (``import .tools``). Implicit relative imports
   (``import tools``) are never allowed.
 * Use ``'single quotes'`` for string literals, and
@@ -93,7 +93,7 @@ the edited files in your uncommited git change::
 
 If you want to lint the entire code base run::
 
-    $ pylint $(find tests rever -name \*.py | sort)
+    $ pylint $(find tests fixie -name \*.py | sort)
 
 
 How to Test
@@ -149,15 +149,15 @@ has to be prefixed with `test_`::
         assert is_true_or_false
 
 The conftest.py in tests directory defines fixtures for mocking various
-parts of rever for more test isolation. For a list of the various fixtures::
+parts of fixie for more test isolation. For a list of the various fixtures::
 
     $ py.test --fixtures
 
 when writing tests it's best to use pytest features i.e parametrization::
 
     @pytest.mark.parametrize('env', [test_env1, test_env2])
-    def test_one(env, rever_builtins):
-        rever_builtins.__rever_env__ = env
+    def test_one(env, fixie_builtins):
+        fixie_builtins.__fixie_env__ = env
         ...
 
 this will run the test two times each time with the respective `test_env`.
@@ -167,7 +167,7 @@ only once for the different test cases and you get less isolation.
 With that in mind, each test should have the least `assert` statements,
 preferably one.
 
-At the moment, rever doesn't support any pytest plugins.
+At the moment, fixie doesn't support any pytest plugins.
 
 Happy Testing!
 
@@ -190,15 +190,15 @@ Auto-Documentation Hooks
 ------------------------
 The docstrings that you have written will automatically be connected to the
 website, once the appropriate hooks have been setup.  At this stage, all
-documentation lives within rever's top-level ``docs`` directory.
+documentation lives within fixie's top-level ``docs`` directory.
 We uses the sphinx tool to manage and generate the documentation, which
 you can learn about from `the sphinx website <http://sphinx-doc.org/>`_.
-If you want to generate the documentation, first rever itself must be installed
+If you want to generate the documentation, first fixie itself must be installed
 and then you may run the following command from the ``docs`` dir:
 
 .. code-block:: console
 
-    ~/rever/docs $ make html
+    ~/fixie/docs $ make html
 
 For each new
 module, you will have to supply the appropriate hooks. This should be done the
@@ -211,7 +211,7 @@ Python Hooks
 Python documentation lives in the ``docs/api`` directory.
 First, create a file in this directory that represents the new module called
 ``mymod.rst``.
-The ``docs/api`` directory matches the structure of the ``rever/`` directory.
+The ``docs/api`` directory matches the structure of the ``fixie/`` directory.
 So if your module is in a sub-package, you'll need to go into the sub-package's
 directory before creating ``mymod.rst``.
 The contents of this file should be as follows:
@@ -220,22 +220,22 @@ The contents of this file should be as follows:
 
 .. code-block:: rst
 
-    .. _rever_mymod:
+    .. _fixie_mymod:
 
     =======================================
-    My Awesome Module -- :mod:`rever.mymod`
+    My Awesome Module -- :mod:`fixie.mymod`
     =======================================
 
-    .. currentmodule:: rever.mymod
+    .. currentmodule:: fixie.mymod
 
-    .. automodule:: rever.mymod
+    .. automodule:: fixie.mymod
         :members:
 
 This will discover all of the docstrings in ``mymod`` and create the
 appropriate webpage. Now, you need to hook this page up to the rest of the
 website.
 
-Go into the ``index.rst`` file in ``docs/rever`` or other subdirectory and add
+Go into the ``index.rst`` file in ``docs/fixie`` or other subdirectory and add
 ``mymod`` to the appropriate ``toctree`` (which stands for table-of-contents
 tree). Note that every sub-package has its own ``index.rst`` file.
 
@@ -251,7 +251,7 @@ Building the website/documentation requires the following dependencies:
 -----------------------------------
 Procedure for modifying the website
 -----------------------------------
-The rever website source files are located in the ``docs`` directory.
+The fixie website source files are located in the ``docs`` directory.
 A developer first makes necessary changes, then rebuilds the website locally
 by executing the command::
 
@@ -271,7 +271,7 @@ developer can push their local changes directly to the website by::
 
 Branches and Releases
 =============================
-Mainline rever development occurs on the ``master`` branch. Other branches
+Mainline fixie development occurs on the ``master`` branch. Other branches
 may be used for feature development (topical branches) or to represent
 past and upcoming releases.
 

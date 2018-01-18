@@ -48,7 +48,13 @@ run just a subset of services that interest you. For example,
     server:starting fixie http://localhost:8642
     ...
 
-For more information, please see the `Usage page <usage.html>`_.
+For more information, please see the `Usage page <usage.html>`_.  You can then ``POST``
+JSON to various URLs that the services enable.  For instance, to register a new user,
+you could:
+
+.. code-block:: bash
+
+    $  curl -X POST http://localhost:8642/register -d '{"user": "buttercup", "email": "tpb@example.com"}'
 
 =========
 Contents

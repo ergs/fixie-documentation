@@ -1,10 +1,11 @@
-.. _fixie_request_handler:
+.. _fixie_jsonutils:
 
 ********************************************************************************
-JSON Validating Request Handler (``fixie.request_handler``)
+JSON Utilities (``fixie.jsonutils``)
 ********************************************************************************
 
-.. automodule:: fixie.request_handler
+.. automodule:: fixie.jsonutils
     :members:
     :undoc-members:
+    :inherited-members:
 

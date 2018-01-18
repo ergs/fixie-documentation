@@ -9,3 +9,8 @@ The interfaces for the fixie ecosystem:
     :maxdepth: 1
 
     fixie-request_handler
+    fixie-environ
+    fixie-logger
+    fixie-main
+    fixie-tools
+    fixie-jsonutils

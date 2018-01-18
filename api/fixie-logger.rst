@@ -1,10 +1,11 @@
-.. _fixie_request_handler:
+.. _fixie_logger:
 
 ********************************************************************************
-JSON Validating Request Handler (``fixie.request_handler``)
+Logger (``fixie.logger``)
 ********************************************************************************
 
-.. automodule:: fixie.request_handler
+.. automodule:: fixie.logger
     :members:
     :undoc-members:
+    :inherited-members:
 

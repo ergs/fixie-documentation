@@ -1,10 +1,11 @@
-.. _fixie_request_handler:
+.. _fixie_environ:
 
 ********************************************************************************
-JSON Validating Request Handler (``fixie.request_handler``)
+Environment (``fixie.environ``)
 ********************************************************************************
 
-.. automodule:: fixie.request_handler
+.. automodule:: fixie.environ
     :members:
     :undoc-members:
+    :inherited-members:
 

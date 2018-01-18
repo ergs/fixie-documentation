@@ -1,10 +1,11 @@
-.. _fixie_request_handler:
+.. _fixie_main:
 
 ********************************************************************************
-JSON Validating Request Handler (``fixie.request_handler``)
+Command Line Interface (``fixie.main``)
 ********************************************************************************
 
-.. automodule:: fixie.request_handler
+.. automodule:: fixie.main
     :members:
     :undoc-members:
+    :inherited-members:
 
